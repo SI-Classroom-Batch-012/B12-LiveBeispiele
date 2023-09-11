@@ -11,7 +11,7 @@ fun main() {
     // Extra Kompilierfehler: direkt beim Schreiben merkt die IDE, dass der Code fehlerhaft ist, weil die Syntax nicht stimmt (zum Ausprobieren einkommentieren):
     //pirntln("Wie geht's?")
 
-    // Extra Laufzeitfehler: Der Compiler warnt uns schon, dass die Liste nicht bis 100 geht, aber es ist kein Syntaxfehler -> erst bei der Laufzeit, wenn die Zeile 17 erreicht wird, stürzt das Programm ab
+    // Extra Laufzeitfehler: Der Compiler warnt uns schon, dass die Liste nicht bis 100 geht, aber es ist kein Syntaxfehler -> erst bei der Laufzeit, wenn die Zeile 16 erreicht wird, stürzt das Programm ab
     val list = listOf(1,2,3,4)
     //println(list[123])
 
