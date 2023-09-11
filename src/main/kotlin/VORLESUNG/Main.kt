@@ -1,5 +1,20 @@
 package VORLESUNG
 
-fun main(){
-    // TODO: LiveBeispiele
+/*
+    main Funktion: der Ort, an dem unser Code ausgeführt wird
+    jeder Code muss da rein
+ */
+fun main() {
+    // nächste Zeile druckt den Inhalt von println() in die Konsole
+    println("Hello Batch 12!")
+
+    // Extra Kompilierfehler: direkt beim Schreiben merkt die IDE, dass der Code fehlerhaft ist, weil die Syntax nicht stimmt (zum Ausprobieren einkommentieren):
+    //pirntln("Wie geht's?")
+
+    // Extra Laufzeitfehler: Der Compiler warnt uns schon, dass die Liste nicht bis 100 geht, aber es ist kein Syntaxfehler -> erst bei der Laufzeit, wenn die Zeile 17 erreicht wird, stürzt das Programm ab
+    var list = listOf(1,2,3,4)
+    println(list[100])
+
+
+
 }
