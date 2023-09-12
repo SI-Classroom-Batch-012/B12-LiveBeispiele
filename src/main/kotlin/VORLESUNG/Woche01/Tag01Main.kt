@@ -1,4 +1,4 @@
-package VORLESUNG
+package VORLESUNG.Woche01
 
 /*
     main Funktion: der Ort, an dem unser Code ausgeführt wird
