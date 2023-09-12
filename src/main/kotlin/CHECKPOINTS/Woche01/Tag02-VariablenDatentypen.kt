@@ -29,13 +29,13 @@ fun main(){
     ageString = "22"
 
     // Boolean: Wahrheitswert: wahr oder falsch
-    var ofAge: Boolean = true // false
+    val ofAge: Boolean = true // false
     println("Nicht mehr minderjährig: $ofAge")
     println()
 
 
     // Strings einlesen und Ausgeben
     print("Gib bitte etwas ein: ")
-    var eingabe: String = readln()
+    val eingabe: String = readln()
     println("Deine Eingabe: $eingabe")
 }
