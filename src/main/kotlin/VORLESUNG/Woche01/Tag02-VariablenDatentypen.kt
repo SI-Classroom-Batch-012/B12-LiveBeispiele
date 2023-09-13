@@ -3,13 +3,13 @@ package VORLESUNG.Woche01
 
 fun main(){
     // Variable neu anlegen: Schlüsselwort var
-    var firstName: String = "Harry"
-    //println(firstName)
+    var firstName: String = "Ron"
+    println(firstName)
     // Variable aktualisieren: einfach über den Variablennamen
-    firstName = "Ron"
+    firstName = "Harry"
     //println(firstName)
 
-    //println("Harry") <- String, der nicht in Variable verpackt ist, drucken
+    //println("Harry") <- mann kann auch einen String, der nicht in Variable verpackt ist, drucken
 
     var lastName: String = "Potter"
 
@@ -29,7 +29,7 @@ fun main(){
 
     // Konstanten: Variablen, die NICHT veränderbar sind
     val weekDays: Int = 7
-    // weekDays = 8 // <-- zum ausprobieren Einkommentieren
+    // weekDays = 8 // <-- zum ausprobieren Einkommentieren, funktioniert nicht
 
     val pi: Double = 3.14 // Pi ist eine mathematische Konstante
 
