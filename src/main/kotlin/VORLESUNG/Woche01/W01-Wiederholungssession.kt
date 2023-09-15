@@ -3,39 +3,39 @@ package VORLESUNG.Woche01
 fun main(){
 
     // leerer String-Karton, auf dem name steht
-//    var name: String // String nicht ausgegraut, weil es keinene Inhalt gibt, von dem aus erschlossen werden kann, um welchen Datentyp es sich handelt.
-//
-//    var firstName: String = "Jim"
-//    println(firstName)
-//    firstName = "Simon"
-//    println(firstName)
-//    firstName = "Artem"
-//    println(firstName)
-//
-//    // name einen Wert zuweisen
-//    name = "Markus"
-//    println(name)
-//    println("name eingeben:")
-//    name = readln() // readln: Konsoleneingaben im Programm verwenden
-//    println(name)
-//
-//    // Konstanten: Variablen, die NICHT veränderbar sind
-//    val lastName = "Schmidt"
-//    // lastName = "Meyer" // einkommentieren, um Compilerfehler zu sehen
-//
-//    var intNr: Int
-//    var doubleNr: Double
-//    var isRaining: Boolean
-//
-//    intNr = 10
-//    doubleNr = 10.5
-//    isRaining = false
-//
-//
+    var name: String // String nicht ausgegraut, weil es keinene Inhalt gibt, von dem aus erschlossen werden kann, um welchen Datentyp es sich handelt.
+
+    var firstName: String = "Jim"
+    println(firstName)
+    firstName = "Simon"
+    println(firstName)
+    firstName = "Artem"
+    println(firstName)
+
+    // name einen Wert zuweisen
+    name = "Markus"
+    println(name)
+    println("name eingeben:")
+    name = readln() // readln: Konsoleneingaben im Programm verwenden
+    println(name)
+
+    // Konstanten: Variablen, die NICHT veränderbar sind
+    val lastName = "Schmidt"
+    // lastName = "Meyer" // einkommentieren, um Compilerfehler zu sehen
+
+    var intNr: Int
+    var doubleNr: Double
+    var isRaining: Boolean
+
+    intNr = 10
+    doubleNr = 10.5
+    isRaining = false
+
+
     // String Interpolation / Escapen mit dem $
 
     var city: String = "Lisbon"
-    var greetingWoDollar: String = "Willkommen in city"
+    var greetingWoDollar: String = "Willkommen in city" // hier wird city nicht als Variable/Code erkannt
     var greeting: String = "Willkommen in $city"
     println(greetingWoDollar)
     println(greeting)
