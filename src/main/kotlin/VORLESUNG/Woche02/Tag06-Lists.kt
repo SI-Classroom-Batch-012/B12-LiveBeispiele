@@ -69,26 +69,39 @@ fun main(){
     // lastIndexOf
     println("2. Index von Eva: ${nameList.lastIndexOf("Eva")}")
 
+    // min - gibt das kleinste Element in einer Liste zurück
+    println(numbersList.min())
+    println(nameList.min())
 
-    // min
 
-    // max
+    // max - gibt das größte Element in einer Liste zurück
+    println(numbersList.max())
+    println(nameList.max())
 
-    // contains
+    // contains - gibt true zurück, wenn die Liste das gegebene Element enthält
+    println(nameList.contains("Simon")) // gibt false zuruück, weil kein Simon in der Liste steht
+    println(nameList.contains("Adam")) // gibt true zurück, weil Adam in der Liste steht
+
 
     // get
+    println(nameList.get(4)) // gibt das Element an Index 4 zurück
+    println(nameList[4]) // exakt das gleiche
+
 
     // subList
+    var subList = nameList.subList(0,2) // gibt die Elemente von inklusive 0 bis ausschließlich 2, also 0 und 1, zurück
+    println(subList)
 
     // reversed
+    var reversedList = nameList.reversed() // gibt umgedrehte Kopie der Liste zurück
+    println(reversedList)
 
     // sorted
+    var sortedList = nameList.sorted() // gibt sortierte Kopie der Liste zurück
+    println(sortedList)
 
-
-
-
-
-
+    var result = numbersList[0]+numbersList[4]
+    println(result)
 
 
 }
