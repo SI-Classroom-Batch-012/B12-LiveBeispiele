@@ -51,5 +51,6 @@ fun main() {
 
     //Leere eine Liste komplett
     name.clear()
+    println(name)
 
 }
