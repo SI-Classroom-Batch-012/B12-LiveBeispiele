@@ -92,39 +92,64 @@ fun main(){
 
 // SCHREIBENDE OPERATIONEN: NUR MIT MUTABLE LISTS
 
-    // remove
+    // remove: entfernt das 1. vorkommende, passende Element (nicht mehrere, falls mehrere passen)
+    println(mutableShoppingList)
+    mutableShoppingList.remove("Mangos")
 
 
-    // removeAll: nimmt eine Liste an Elementen, die entfernt werden sollen, als Parameter
+    // removeAll: nimmt eine Liste an Elementen, die entfernt werden sollen, als Parameter. hiermit können doppelt vorkommende Elemente entfernt werden.
+    //mutableShoppingList.removeAll(listOf("Mangos"))
+    mutableShoppingList.add("Milch")
+    mutableShoppingList.add("Milch")
+    mutableShoppingList.add("Milch")
+    mutableShoppingList.removeAll(listOf("Milch")) // removeAll entfernt ALLE vorkommnisse von milch
 
 
-    // add
+    // add: ohne Index, fügt ein Element am Ende der Liste hinzu
+    mutableShoppingList.add("Kartoffeln")
+
+    // add: mit Index: fügt ein Element am gegebenem Index  hinzu
+    mutableShoppingList.add(0,"Apfelsaft")
+
+    // clear: leert Liste komplett aus
+    mutableShoppingList.clear()
+
+    // addAll: fügt neue Liste in Liste ein
+    var newShoppingList: List<String> = listOf("Mehl", "Eier", "Zucker", "Gelee", "Schokodrops", "Glasur", "Vanillezucker", "Zimt", "Rosinen", "Puderzucker")
+    mutableShoppingList.addAll(newShoppingList)
+    println("AdAll")
+    println(mutableShoppingList)
+
+    println("RemoveAt 0")
+    // removeAt; entfernt Element an spezifischen Index
+    mutableShoppingList.removeAt(0)
+    println(mutableShoppingList)
 
 
-
-    // clear
-
-
-
-    // addAll
+    // removeLast: entfernt das letzte Element aus der Liste
+    println("Remove Last:")
+    mutableShoppingList.removeLast()
+    println(mutableShoppingList)
 
 
-    // removeAt
-
-
-    // removeLast
-
-
-
-    // removeFirst
+    // removeFirst: entfernt das 1. Element (index 0) aus der Liste
+    println("Remove First")
+    mutableShoppingList.removeFirst()
+    println(mutableShoppingList)
 
 
 
     // sort: sortiert liste aufsteigend
+    println("Sort")
+    mutableShoppingList.sort()
+    println(mutableShoppingList)
 
 
 
     // shuffle: mischt liste durch
-    var x  = 0
+    println("Shuffle")
+    mutableShoppingList.shuffle()
+    println(mutableShoppingList)
+
 
 }
