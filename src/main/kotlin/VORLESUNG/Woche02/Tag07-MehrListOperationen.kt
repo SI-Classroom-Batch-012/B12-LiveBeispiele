@@ -76,12 +76,13 @@ fun main(){
 
     // subList: gibt liste vom 1. index in den Klammern bis AUSschliesslich den 2. Index aus
     var subListShopping: List<String> = shoppingList.subList(0,4)
-
+    println("Sublist: $subListShopping")
 
     // slice: kann eine Int Range (x..y) oder eine Liste übergeben bekommen, das obere Ende der Range ist EINbegriffen (nicht wie bei subList)
     var intRange: IntRange = 0..4
     println(intRange)
     var sliceShopping: List<String> = shoppingList.slice(0..4)
+    println("Slice: $sliceShopping")
 
     // reversed: erstellt eine Kopie der shoppingList, kehrt darin die Reihenfolge um
     var reversedShoppingList: List<String> = shoppingList.reversed()
