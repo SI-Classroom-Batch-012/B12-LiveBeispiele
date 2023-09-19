@@ -58,10 +58,3 @@ fun main(){
 }
 
 
-
-
-//    var moneyList: MutableList<Int> = mutableListOf(100,200,300)
-//    println(moneyList)
-//    moneyList.first()-50 //TODO
-//    println(moneyList)
-//TODO alle vorkommnisse in liste
