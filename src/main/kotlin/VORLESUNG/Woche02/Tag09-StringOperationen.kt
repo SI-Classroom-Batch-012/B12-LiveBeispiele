@@ -63,15 +63,33 @@ fun main() {
 
 
     // Entfernen von Leerzeichen am Anfang und Ende eines Strings
+    val trimmed: String = "     hallo     ".trim()
+    println(trimmed)
 
 
-
-    // Überprüfen, ob ein String leer oder null ist
+    // Überprüfen, ob ein String leer oder null ist: isEmptyOrNull
+    var example: String? = "Hallo halli ich bin nullable."
+    var exampleIsEmpty: Boolean = example.isNullOrEmpty()
+    example = null as String?
+    var isNullOrEmpty: Boolean = example.isNullOrEmpty()
+    println(isNullOrEmpty)
 
 
     // Wiederholen eines Strings
+    val repeated: String = "Hallo ".repeat(100)
+    println(repeated)
 
-
-    // Ausgabe
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
