@@ -117,6 +117,25 @@ fun main(){
     println(music.keys)
     println(music.values)
 
+    // Operationen an Listen in Maps
+    // Element hinzufügen
+    music["Taylor Swift"]?.add("Karma")
+    // Element entfernen
+    music["Lorde"]?.remove("Royals")
+    // neuen Key und Value in die Map einfügen
+    music["Adele"] = mutableListOf("Hello","Rolling in the Deep", "Someone Like You")
+    // Key und dessen Value entfernen
+    music.remove("Die Ärzte")
+    // Existiert ein bestimmter Key?
+    val artistExists = music.containsKey("Taylor Swift")
+    // existiert ein bestimmes Element in den Values eines Keys?
+    music["Lorde"]?.contains("Royals")
+
+
+
+
+
+
 
 
 }
