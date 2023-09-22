@@ -43,18 +43,29 @@ fun main(){
     // 1. Variante:
         // 1. zufälliges Element auswählen,
         var randomPrime: Int = primeNumbers.random()
-        // 2. löschen
+    // 2. löschen
         primeNumbers.remove(randomPrime)
-    // 2. Variante in einem Schritt: Funktionsaufruf an remove übergeben
+    println("Zufällig ausgewählte Zahl: $randomPrime")
+    println("primeNumbers ohne diese Zahl: $primeNumbers")
+    // 2. Variante in einem Schritt:
+        // Funktionsaufruf an remove übergeben, statt das Ergebnis davon erst in eine Variable zu speichern
         primeNumbers.remove(primeNumbers.random())
 
-
     // mehrere Elemente miteinander addieren
+    var number: Int = primeNumbers[0]
+    var number2: Int = primeNumbers[1]
+    var firstThreePrimesAdded: Int = number + number2 + primeNumbers[2]
+    println("Addition der ersten 3 verbleibenden Primzahlen aus primeNumber (also $number + $number2 + ${primeNumbers[2]}) = $firstThreePrimesAdded")
 
-
+    // Liste umgekehrt speichern
+    println("reversed:")
+    primeNumbers.reverse()
+    println(primeNumbers)
 
     // Liste random durchmischen, drucken
-
+    println("shuffle:")
+    primeNumbers.shuffle()
+    println(primeNumbers)
 
 
 
@@ -73,9 +84,19 @@ fun main(){
         "9. Primzahl" to 23,
         "10. Primzahl" to 29
     )
+    println(primeMap)
 
 
     // Primzahlen aus der Map addieren
+    var lastTwoPrimesAdded: Int = 0 // darf nicht nullable sein, denn dann kann man nicht damit rechnen
+    lastTwoPrimesAdded = lastTwoPrimesAdded + primeMap["9. Primzahl"]!! // !! -> "keine sorge ist auf keinen Fall null"
+    println("LastTwoPrimesAdded: 1. Schritt 0 + ${primeMap["9. Primzahl"]} = $lastTwoPrimesAdded")
+    var prim10: Int? = primeMap["10. Primzahl"]
+    lastTwoPrimesAdded = lastTwoPrimesAdded + prim10!!
+    println("LastTwoPrimesAdded: 2. ${primeMap["9. Primzahl"]} + $prim10 = $lastTwoPrimesAdded")
+
+
+
 
 
 
@@ -89,25 +110,54 @@ fun main(){
         "Die Ärzte" to mutableListOf("Schrei nach Liebe", "Hurra", "1/2 Lovesong")
     )
 
-//    println(music)
-//    println(music.keys)
-//    println(music.values)
+    println(music)
+    println(music.keys)
+    println(music.values)
 
     // Operationen an Listen in Maps
     // Element hinzufügen
+    // put: überschreibt vorherige Werte, geht also nicht
+    //music.put("Taylor Swift", mutableListOf("Karma"))
+    //println(music["Taylor Swift"])
+    // set geht ebenfalls nicht, überschreibt auch alles andere
+    //music.set("Taylor Swift", mutableListOf("Lavender Haze"))
+    println(music["Taylor Swift"])
 
-    // Element entfernen
+    var karmaAdded: Boolean = music["Taylor Swift"]!!.add("Karma")
+    println("Karma erfolgreich hinzugefügt? -> $karmaAdded")
+    println(music["Taylor Swift"])
+    music["Taylor Swift"]!!.addAll(listOf("Lavender Haze", "Out of the Woods", "Style", "Snow at the Beach"))
+    println(music["Taylor Swift"])
+
+
+    // Element entfernen: Royals aus Lorde entfernen
+    // music.remove("Lorde") -> entfernt Lorde komplett, wir wollen aber nur einen Song von ihr entfernen
+    music["Lorde"]!!.remove("Royals")
+    println(music["Lorde"])
 
 
     // neuen Key und Value in die Map einfügen
+        // 1. Variante
+        music.put("Michael Jackson", mutableListOf("Billie Jean", "Thriller", "Earth Song"))
+        println(music)
+        // 2. Variante: wenn der key nicht existiert, wird automatisch ein neuer Eintrag erstellt
+        music["Adele"] = mutableListOf("Hello", "Someone Like You", "Rolling in the Deep")
+        println(music)
+
 
     // Key und dessen Value entfernen
+    music.remove("Michael Jackson")
+    println(music)
 
     // Existiert ein bestimmter Key?
+    val michaelExists: Boolean = music.containsKey("Michael Jackson")
+    println("Gibt es Michael Jackson noch? -> $michaelExists")
+
+    // exisitert ein Value, also eine Liste an bestimmten Songs, in music?
+    val allSongsExists: Boolean = music.containsValue(mutableListOf("Surprise Me", "Rumors")) // existiert nicht, false
 
     // existiert ein bestimmes Element im Value eines Keys?
-
-
-
+    val songExists: Boolean = music["Taylor Swift"]!!.contains("Style")
+    println("Existiert Style in der Taylor Swift Values Liste? -> $songExists")
 
 }
