@@ -1,10 +1,7 @@
 package VORLESUNG.Woche03
 
-import kotlin.math.PI
-import kotlin.math.roundToInt
-
 fun main(){
-    printGreeting()
+    getGreeting()
     println("Es folgt der Funktionsaufruf von calculateAge()")
     calculateAge()
     println("Funktionsaufruf beendet.")
