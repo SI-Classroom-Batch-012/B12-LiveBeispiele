@@ -24,8 +24,7 @@ fun snackAutomat() {
     val choice: String = readln().uppercase()
 
     // 2.automat spuckt (per println) auswahl aus
-    // var x = liste[0] // das 1. Element in der Liste wird in x gespeichert
-
+    // var x: String = liste[0] // das 1. Element in der Liste wird in x gespeichert, gleiches Prinzip gilt für Zugriff auf Map Values:
     var chosenSnack: String = snackMachine[choice]!!
 
     println("Viel Vergnügen mit $chosenSnack")

@@ -4,28 +4,41 @@ import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.roundToInt
 
-fun main(){
 
+fun main(){
+    var age = calculateAgeReturn()
+    println("Println in der main: auch hier kommen wir an age ($age) dran.")
+
+    var name = getName()
+    println("Das Ergebnis von getName ist $name")
+
+
+    println("Das Ergebnis von getSurface ist ${getSurface()}")
+
+    println("Umfang des Kreises: ${getUmfang()}")
 
 }
 
-fun calculateAgeReturn(){
+fun calculateAgeReturn(): Int {
     println("Please enter birth year...")
     // user soll geburtsjahr eingeben
     val birthYear: Int = readln().toInt()
     // daraus soll alter errechnet und ausgegeben werden
     val age: Int = 2023-birthYear
     println("You were born in $birthYear, your age in 2023 is: $age")
+    return age
+
 }
 
 
-fun getGreeting() {
+fun getName(): String {
     println("Hi, wie ist dein Name?")
     val name: String = readln()
     println("Soso, dein name ist also $name. Hallo!")
+    return name
 }
 
-fun getSurface(){
+fun getSurface(): Double {
     println("Bitte gib den Radius deines Kreises ein:")
     // user gibt radius ein
     val radius: Double = readln().toDouble()
@@ -39,14 +52,16 @@ fun getSurface(){
     // println(stringFlaeche)
     // ergebnis ausdrucken
     println("Die Fläche deines Kreises mit einem Radius von $radius beträgt $flaeche")
+    return flaeche
 
 }
 
-fun getUmfang(){
+fun getUmfang(): Double {
     println("Bitte Radius deines Kreises eingeben...")
     val radius: Double = readln().toDouble()
     var result: Double = 2*radius* PI
     // result runden:
     result = (result*100).roundToInt() / 100.0
-    println("Der Umfang des Kreises ist: $result ")
+    println("Der Umfang des Kreises ist: $result")
+    return result
 }
