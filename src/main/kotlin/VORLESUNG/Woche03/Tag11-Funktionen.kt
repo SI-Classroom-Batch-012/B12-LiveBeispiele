@@ -1,7 +1,7 @@
 package VORLESUNG.Woche03
 
 fun main(){
-    getGreeting()
+    printGreeting()
     println("Es folgt der Funktionsaufruf von calculateAge()")
     calculateAge()
     println("Funktionsaufruf beendet.")
