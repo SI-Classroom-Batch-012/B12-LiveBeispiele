@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag11VoidFunktionen
 
 fun main(){
     printGreeting()
@@ -8,6 +8,7 @@ fun main(){
     radiusToSurface()
 
 }
+
 
 // greeting
 fun printGreeting() {

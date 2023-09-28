@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag12ReturnFunktionen
 
 import kotlin.math.PI
 import kotlin.math.pow
@@ -19,6 +19,10 @@ fun main(){
 
 }
 
+/**
+ * Berechnet das Alter des Users basierend auf dessen Geburtsjahr
+ * @return das Ergebnis von 2023-birthYear
+ */
 fun calculateAgeReturn(): Int {
     println("Please enter birth year...")
     // user soll geburtsjahr eingeben
@@ -30,7 +34,10 @@ fun calculateAgeReturn(): Int {
 
 }
 
-
+/**
+ * Liest einen Namen ein und druckt diesen mit einem Gruß aus
+ * @return name, der eingegebene Name
+ */
 fun getName(): String {
     println("Hi, wie ist dein Name?")
     val name: String = readln()
@@ -38,6 +45,10 @@ fun getName(): String {
     return name
 }
 
+/**
+ * Berechnet die Fläche eines Kreises anhand des vom User eingegebenen Radius
+ * @return flaeche, das Ergebnis von radius*radius*PI
+ */
 fun getSurface(): Double {
     println("Bitte gib den Radius deines Kreises ein:")
     // user gibt radius ein
@@ -56,6 +67,10 @@ fun getSurface(): Double {
 
 }
 
+/**
+ * Berechnet den Umfang eines Kreises basierend auf dem eingegebenen Radius.
+ * @return Der berechnete Umfang des Kreises.
+ */
 fun getUmfang(): Double {
     println("Bitte Radius deines Kreises eingeben...")
     val radius: Double = readln().toDouble()

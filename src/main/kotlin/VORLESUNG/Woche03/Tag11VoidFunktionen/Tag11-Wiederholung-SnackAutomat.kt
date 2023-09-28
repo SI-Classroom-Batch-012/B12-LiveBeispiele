@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag11VoidFunktionen
 
 fun main(){
 

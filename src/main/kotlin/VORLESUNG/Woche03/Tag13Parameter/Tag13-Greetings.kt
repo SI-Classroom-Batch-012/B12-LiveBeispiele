@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag13Parameter
 
 fun main(){
      var nameMap: Map<String, Int> = mapOf(
@@ -44,11 +44,23 @@ fun main(){
 
 }
 
+/**
+ * Begrüßt eine Person mit ihrem Namen.
+ * @param name Der Name der Person, die begrüßt werden soll. Standardmäßig ist der Name "Anonym".
+ */
 // Default Parameter: wenn ich nichts übergebe, wird auf den Default zurück gefallen
 fun greet(name: String = "Anonym"){
     println("Hallo, $name")
 }
 
+/**
+ * Begrüßt eine Person mit ihrem Namen, Alter, Wohnort und Postleitzahl.
+ *
+ * @param name Der Name der Person, die begrüßt werden soll.
+ * @param age Das Alter der Person.
+ * @param city Der Wohnort der Person.
+ * @param plz Die Postleitzahl des Wohnorts.
+ */
 fun greetPerson(name: String, age: Int, city: String, plz: Int){
 //    city = "Berlin" // -> nicht möglich, parameter sind immer konstant (zumindest value types, also int, double, boolean, string)
     println("Hallo, $name")

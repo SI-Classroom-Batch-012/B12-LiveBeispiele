@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag13Parameter
 
 fun main(){
     println(add(10,20))

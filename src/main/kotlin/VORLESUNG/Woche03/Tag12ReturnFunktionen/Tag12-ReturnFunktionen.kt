@@ -1,4 +1,4 @@
-package VORLESUNG.Woche03
+package VORLESUNG.Woche03.Tag12ReturnFunktionen
 
 
 
@@ -21,7 +21,7 @@ fun shortSum(): Int {
 }
 
 fun shortSumSum(): Int {
-    return sum()+shortSum()
+    return sum() + shortSum()
 }
 
 fun sumSum() : Int {
