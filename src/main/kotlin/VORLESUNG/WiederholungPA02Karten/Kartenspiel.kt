@@ -77,7 +77,7 @@ fun main() {
     // Aufgabe 4: in Funktion ausgelagert
     cardStealing(handSpieler1,handSpieler2)
     // manuell spieler 1 eine karte abwerfen lassen, weil er sonst 4 hat:
-    handSpieler1.removeFirst()
+    //handSpieler1.removeFirst()
     println("Hand Spieler 1 $spieler1 nach dem klauen: $handSpieler1")
     cardStealing(handSpieler2,handSpieler1)
     println("Hand Spieler 2 $spieler2 nach dem klauen: $handSpieler2")
@@ -93,50 +93,52 @@ fun main() {
     Gib jeweils auf der Konsole aus, welche Karte abgeworfen wurde und welche gezogen wurde
       */
 
-
-    println("Spieler 1 $spieler1, eelche Karte willst du abwerfen? \nBitte Zahl zwischen 1 und 3 eingeben...")
-    var input = readln().toInt()-1 // minus(1)
-    println("Spieler 1 hat die Karte $input ausgewählt, sie wird abgeworfen...")
-    // karte abwerfen
-    handSpieler1.removeAt(input)
-    println("Neue Hand Spieler 1: $handSpieler1")
-
-    println("Spieler 2 $spieler2, eelche Karte willst du abwerfen? \nBitte Zahl zwischen 1 und 3 eingeben...")
-    var input2 = readln().toInt()-1 // minus(1)
-    println("Spieler 2 hat die Karte $input2 ausgewählt, sie wird abgeworfen...")
-    // karte abwerfen
-    handSpieler2.removeAt(input2)
-    println("Neue Hand Spieler 2: $handSpieler2")
-
+    loseCard(spieler1,handSpieler1)
     handSpieler1.add(cards.removeFirst())
     println("Neue Hand $spieler1: $handSpieler1")
 
+    loseCard(spieler2,handSpieler2)
     handSpieler2.add(cards.removeFirst())
     println("Neue Hand $spieler2: $handSpieler2")
 
 
     // Aufgabe 6:
     // Rechne den Gesamtwert der Karten für jeden Spieler aus. Nutze dafür die cardValues Map
+    calculateHandWorth(spieler1,handSpieler1)
+    calculateHandWorth(spieler2,handSpieler2)
 
+
+}
+
+fun calculateHandWorth(playerName: String, playerHand: MutableList<String>) {
     // 1. Variable, in die ich Werte speichere
-    var valuesPlayer1: Int = 0
-    var valuesPlayer2: Int = 0
+    var values: Int = 0
 
     // 2. Rechnung beginnen
     // lange Variante:
     // Variable mit dem Inhalt der Karte aus der Hand
-    var inhalt = handSpieler1[0]
+    var inhalt = playerHand[0]
     // Wert aus der Map in Variable speichern
     var value: Int = cardValues[inhalt]!!
 
     // Wert in die Values Variable addieren
-    valuesPlayer1 = valuesPlayer1 + value
-    valuesPlayer1 = valuesPlayer1 + cardValues[handSpieler1[1]]!!
-    valuesPlayer1 = valuesPlayer1 + cardValues[handSpieler1[2]]!!
+    values = values + value
+    values = values + cardValues[playerHand[1]]!!
+    values = values + cardValues[playerHand[2]]!!
 
-    println("Wert der Hand von Player 1 $spieler1: $valuesPlayer1")
-
+    println("Wert der Hand von $playerName: $values")
 }
+
+fun loseCard(playerName: String, playerHand: MutableList<String>) {
+    println("$playerName, eelche Karte willst du abwerfen? \nBitte Zahl zwischen 1 und 3 eingeben...")
+    var input = readln().toInt()-1 // minus(1)
+    println("Spieler 1 hat die Karte $input ausgewählt, sie wird abgeworfen...")
+    // karte abwerfen
+    playerHand.removeAt(input)
+    println("Neue Hand $playerName: $playerHand")
+}
+
+
 
 /**
  * lässt einen spieler eine Karte aus der hand des anderen spielers klauen
@@ -153,6 +155,6 @@ fun cardStealing(diebHand: MutableList<String>, opferHand: MutableList<String>){
     // diese karte dem dieb geben
     diebHand.add(randomCard)
 
-    println("Dieb had $randomCard von Opfer gestohlen.")
+    println("Dieb hand $randomCard von Opfer gestohlen.")
     println("Dieb hand: $diebHand")
 }
