@@ -39,18 +39,17 @@ val cardValues: Map<String, Int> = mapOf(
 )
 
 fun main() {
-    // Beispiel: Liste anlegen
-    var liste: List<String> = listOf("Jacke", "Hose","Schal","Mütze")
-    var numbers: List<Int> = listOf(1,2,3,4,5)
+    // Zur Erinnerung
+        // Beispiel Syntax: Liste anlegen
+        var liste: List<String> = listOf("Jacke", "Hose","Schal","Mütze")
+        var numbers: List<Int> = listOf(1,2,3,4,5)
 
     // Aufgabe 1: Karten mischen
     cards.shuffle()
 
     // Aufgabe 2: Spielernamen eingeben
-    println("Spieler 1, bitte Namen eingeben...")
-    var spieler1: String = readln()
-    println("Spieler 2, bitte Namen eingeben...")
-    var spieler2: String = readln()
+    val spieler1 = inputPlayerName()
+    val spieler2: String = inputPlayerName()
 
     // Aufgabe 3: Spielerhände erstellen
     // leere Hand
@@ -58,30 +57,24 @@ fun main() {
     val handSpieler2: MutableList<String> = mutableListOf()
 
     // erste Karte vom cards Stapel ziehen, auf die Hand legen
+        // lange Variante: Variable
+        var firstCard: String = cards.removeFirst()
+        handSpieler1.add(firstCard)
 
-    // lange Variante: Variable
-    var firstCard: String = cards.removeFirst()
-    handSpieler1.add(firstCard)
+        // kurze Variante: ohne Variablen, spieler kriegen abwechselnd die oberste Karte
+        handSpieler2.add(cards.removeFirst())
+        handSpieler1.add(cards.removeFirst())
+        handSpieler2.add(cards.removeFirst())
+        handSpieler1.add(cards.removeFirst())
+        handSpieler2.add(cards.removeFirst())
 
-    // kurze Variante: ohne Variablen
-    handSpieler2.add(cards.removeFirst())
-    handSpieler1.add(cards.removeFirst())
-    handSpieler2.add(cards.removeFirst())
-    handSpieler1.add(cards.removeFirst())
-    handSpieler2.add(cards.removeFirst())
+    println("$spieler1: $handSpieler1")
+    println("$spieler2: $handSpieler2")
 
-    println(cards)
-    println(handSpieler1)
-    println(handSpieler2)
 
     // Aufgabe 4: in Funktion ausgelagert
-    cardStealing(handSpieler1,handSpieler2)
-    // manuell spieler 1 eine karte abwerfen lassen, weil er sonst 4 hat:
-    //handSpieler1.removeFirst()
-    println("Hand Spieler 1 $spieler1 nach dem klauen: $handSpieler1")
-    cardStealing(handSpieler2,handSpieler1)
-    println("Hand Spieler 2 $spieler2 nach dem klauen: $handSpieler2")
-
+    stealCard(spieler1,handSpieler1,spieler2,handSpieler2)
+    stealCard(spieler2,handSpieler2,spieler1,handSpieler1)
 
 
     // Aufgabe 5
@@ -93,13 +86,9 @@ fun main() {
     Gib jeweils auf der Konsole aus, welche Karte abgeworfen wurde und welche gezogen wurde
       */
 
-    loseCard(spieler1,handSpieler1)
-    handSpieler1.add(cards.removeFirst())
-    println("Neue Hand $spieler1: $handSpieler1")
-
-    loseCard(spieler2,handSpieler2)
+    replaceCard(spieler1,handSpieler1)
+    replaceCard(spieler2,handSpieler2)
     handSpieler2.add(cards.removeFirst())
-    println("Neue Hand $spieler2: $handSpieler2")
 
 
     // Aufgabe 6:
@@ -107,6 +96,12 @@ fun main() {
     calculateHandWorth(spieler1,handSpieler1)
     calculateHandWorth(spieler2,handSpieler2)
 
+
+}
+
+fun inputPlayerName(): String {
+    println("Bitte Namen für deinen Spieler eingeben...")
+    return readln()
 
 }
 
@@ -129,12 +124,14 @@ fun calculateHandWorth(playerName: String, playerHand: MutableList<String>) {
     println("Wert der Hand von $playerName: $values")
 }
 
-fun loseCard(playerName: String, playerHand: MutableList<String>) {
-    println("$playerName, eelche Karte willst du abwerfen? \nBitte Zahl zwischen 1 und 3 eingeben...")
+fun replaceCard(playerName: String, playerHand: MutableList<String>) {
+    println("$playerName, welche Karte willst du abwerfen? \nBitte Zahl zwischen 1 und 3 eingeben...")
     var input = readln().toInt()-1 // minus(1)
-    println("Spieler 1 hat die Karte $input ausgewählt, sie wird abgeworfen...")
+    println("Spieler 1 hat die Karte ${input+1} (${playerHand[input]}) ausgewählt, sie wird abgeworfen...")
     // karte abwerfen
     playerHand.removeAt(input)
+    playerHand.add(cards.removeFirst())
+    println("$playerName zieht neue Karte vom Stapel...")
     println("Neue Hand $playerName: $playerHand")
 }
 
@@ -142,19 +139,22 @@ fun loseCard(playerName: String, playerHand: MutableList<String>) {
 
 /**
  * lässt einen spieler eine Karte aus der hand des anderen spielers klauen
+ * @param dieb name des diebs
  * @param diebHand, der klauende
+ * @param opfer name des opfers
  * @param opferHand, der beklaute
  */
-fun cardStealing(diebHand: MutableList<String>, opferHand: MutableList<String>){
+fun stealCard(opfer: String, opferHand: MutableList<String>, dieb: String, diebHand: MutableList<String>, ){
 
     // eine zufällige Karte vom Opfer auswählen
     var randomCard: String = opferHand.random()
-    println("Zufällige Karte aus Opferhand: $randomCard")
+    println("Zufällige geklaute Karte von $opfer: $randomCard")
     // diese karte vom opfer entfernen
     opferHand.remove(randomCard)
     // diese karte dem dieb geben
     diebHand.add(randomCard)
 
-    println("Dieb hand $randomCard von Opfer gestohlen.")
-    println("Dieb hand: $diebHand")
+    println("$dieb hat $randomCard von $opfer gestohlen.")
+    println("$dieb: $diebHand")
+    println("$opfer: $opferHand")
 }
