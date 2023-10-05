@@ -1,4 +1,4 @@
-package CHECKPOINTS.Woche3
+package CHECKPOINTS.Woche03
 
 
 fun main() {

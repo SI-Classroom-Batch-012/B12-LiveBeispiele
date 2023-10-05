@@ -1,6 +1,4 @@
-package CHECKPOINTS.Woche3
-
-import com.sun.org.apache.xpath.internal.operations.Bool
+package CHECKPOINTS.Woche03
 
 fun main() {
 
