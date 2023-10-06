@@ -1,7 +1,4 @@
-package VORLESUNG.Woche04.Tag17Verzweigungen
-
-import com.sun.org.apache.xpath.internal.operations.Bool
-import kotlin.math.exp
+package VORLESUNG.Woche04.Tag19Verzweigungen
 
 fun main() {
 
@@ -72,7 +69,6 @@ fun main() {
     // Logisches NICHT: macht den Boolean, vor den man es schreibt, zum Gegenteil.
     var isRaining: Boolean = true
     var isNotRaininn: Boolean = !isRaining
-
 
 
     // Logisches XOR: gibt true zurück, wenn genau 1 der Seiten true ist

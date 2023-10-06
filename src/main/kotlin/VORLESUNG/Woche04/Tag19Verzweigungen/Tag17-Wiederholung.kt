@@ -1,7 +1,4 @@
-package VORLESUNG.Woche04.Tag17Verzweigungen
-
-import java.util.*
-
+package VORLESUNG.Woche04.Tag19Verzweigungen
 
 
 // if else: alter

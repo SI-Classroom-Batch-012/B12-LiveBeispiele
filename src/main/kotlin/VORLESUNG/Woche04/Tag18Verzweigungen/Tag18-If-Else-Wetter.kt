@@ -1,4 +1,4 @@
-package VORLESUNG.Woche04.Tag16Verzweigungen
+package VORLESUNG.Woche04.Tag18Verzweigungen
 
 fun main() {
     val regen = false

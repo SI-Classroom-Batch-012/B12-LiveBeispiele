@@ -1,4 +1,4 @@
-package VORLESUNG.Woche04.Tag17Verzweigungen
+package VORLESUNG.Woche04.Tag19Verzweigungen
 
 fun main(){
 
