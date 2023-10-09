@@ -1,4 +1,4 @@
-package VORLESUNG.Woche04.Tag19Wiederholung
+package VORLESUNG.Woche04.Tag20Wiederholung
 
 // Das hier ist ein abstraktes Beispiel dafür, wie ein Wert von Funktion zu Funktion weitergereicht wird, um damit an verschiedenen Stellen im Projekt zu arbeiten. Wird beim Durchreichen nicht vernünftig in jedem Schritt try catch angewandt, stürzt das Programm ab.
 

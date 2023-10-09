@@ -1,6 +1,4 @@
-package VORLESUNG.Woche04.Tag19Wiederholung
-
-import java.util.*
+package VORLESUNG.Woche04.Tag20Wiederholung
 
 fun main(){
 

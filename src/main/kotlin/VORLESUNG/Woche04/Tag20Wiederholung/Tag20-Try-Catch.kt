@@ -1,4 +1,4 @@
-package VORLESUNG.Woche04.Tag19Wiederholung
+package VORLESUNG.Woche04.Tag20Wiederholung
 fun main(){
 
    // triggerNullPointerEx(null)
