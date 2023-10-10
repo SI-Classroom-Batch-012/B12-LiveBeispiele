@@ -55,15 +55,20 @@ fun doWhilePasswort() {
     // logik: eingabe des Users pruefen.
     do {
         println("passwort eingeben...")
-        val passwort = readln().toInt()
-        // prüfen: ist das passwort korrekt?
-        if (passwort == 1234) {
-            println("Passwort ist korrekt! Willkommen.")
-            passwortRichtig = true
-        } else {
-            println("Falsches Passwort, bitte nochmal versuchen...")
+        try {
+            val passwort = readln().toInt()
+            // prüfen: ist das passwort korrekt?
+            if (passwort == 1234) {
+                println("Passwort ist korrekt! Willkommen.")
+                passwortRichtig = true
+            } else {
+                println("Falsches Passwort, bitte nochmal versuchen...")
+            }
+            anzahlVersuche++
+        } catch (e: Exception){
+            println("Fehler in doWhilePasswort(): $e")
+            throw e
         }
-        anzahlVersuche++
 
     } while (anzahlVersuche < maxAnzahlVersuche && !passwortRichtig) // !passwortRichtig ist das gleiche wie passwortRichtig == false
 
