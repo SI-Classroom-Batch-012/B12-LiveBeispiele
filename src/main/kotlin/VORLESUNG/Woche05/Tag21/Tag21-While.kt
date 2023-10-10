@@ -1,4 +1,4 @@
-package VORLESUNG.Woche05
+package VORLESUNG.Woche05.Tag21
 
 fun main() {
     // Liste, über die wir mit Schleifen durchiterieren können
