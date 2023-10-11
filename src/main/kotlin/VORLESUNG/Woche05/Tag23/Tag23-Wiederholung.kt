@@ -57,7 +57,15 @@ fun main(){
 
 
     println("-----")
+
+    println(numbersList)
     // 5. jede 2. Zahl in Liste modifizieren
+    for (index in 0 until numbersList.size) {
+        if (index % 2 == 1) {
+            numbersList[index] = numbersList[index] + 1
+        }
+    }
+    println(numbersList)
 
 
 }
