@@ -1,4 +1,4 @@
-package VORLESUNG.Woche05.Tag23
+package CHECKPOINTS.Woche05
 
 import java.lang.NumberFormatException
 

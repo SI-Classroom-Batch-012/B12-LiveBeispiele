@@ -37,7 +37,7 @@ package CHECKPOINTS.Woche05
 // liste mit char -- char
 
 
-fun printrange() {
+fun printRange() {
     for(number in 1..9) {
         //number = 1
         //number = 2
@@ -93,7 +93,7 @@ fun filme(){
 
 
 fun main() {
-    //printrange()
+    //printRange()
     //printspecrange()
     //forsteps()
     filme()
