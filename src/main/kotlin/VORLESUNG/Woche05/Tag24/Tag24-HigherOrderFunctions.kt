@@ -68,8 +68,25 @@ fun main() {
     // forEach: geht jedes Element durch und wir können darauf zugreifen und zB drucken. nicht bearbeiten! das geht nur mit map
     fruits.forEach { it }
 
+    // EXPERIMENT:
     // nur für jede 2. Frucht:
-    //TODO
+    var everySndFruit: MutableList<String> = mutableListOf()
+    fruits // hier soll nur noch jedes 2. Element drinstehen --> wie mach ich das?
+    for (index in fruits.indices){
+        if (index % 2 == 0)
+            everySndFruit.add(fruits[index])
+
+    }
+
+    println("------------------------")
+    println(everySndFruit)
+    everySndFruit.forEach{ println(it) }
+
+    println("EXPERIMENT MIT FILTER INDEXED")
+    fruits.filterIndexed { index, fruit -> index % 2 ==0 }.forEach { print(" $it ") }
+    println(" ")
+
+    // Ende Experiment
 
     // map: führt Operation in den { } für jedes Element aus. damit können wir Elemente bearbeiten
     var modifiedFruits: List<String> = fruits.map { it + " ist eine Frucht" }
