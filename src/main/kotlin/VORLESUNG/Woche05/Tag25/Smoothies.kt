@@ -19,7 +19,8 @@ fun main(){
     )
 
     // Unser Ziel: den Gesamtpreis der orders ausgeben
-
-
-
+    //getPrices(smoothies,orders)
 }
+
+//TODO getPrices implementieren
+
