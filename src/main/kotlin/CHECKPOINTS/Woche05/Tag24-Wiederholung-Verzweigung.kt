@@ -76,7 +76,7 @@ fun main() {
 //            break
 //        }
 //    }
-    var enthaeltGrossbuchstabe: Boolean = passwort.any{ it.isUpperCase() }
+    var enthaeltGrossbuchstabe: Boolean = passwort.any { it.isUpperCase() }
 
     if(laengerAlsFuenf && (enthaeltFrag || enthaeltAusr) && enthaeltGrossbuchstabe){
         println("Gültiges Passwort.")
