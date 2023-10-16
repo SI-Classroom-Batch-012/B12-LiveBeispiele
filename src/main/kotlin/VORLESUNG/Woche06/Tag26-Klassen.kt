@@ -9,49 +9,45 @@ fun main() {
 
     // Instanziierung der Klasse Person:
     // 2 konkrete Instanzen (emily und dennis) anlegen
-//    var emily: Person = Person()
-//    var dennis: Person = Person()
-//
-//    emily.name = "Emily"
-//    emily.age = 19
-//    emily.eyeColor = "blau"
-//    emily.password = "passwort"
-//
-//
-//    println("1. Instanz von Person: Emily")
-//    println("Name: ")
-//    println(emily.name)
-//    println("Alter: ")
-//    println(emily.age)
-//    println("Augenfarbe: ${emily.eyeColor}")
-//    // Emily gruesst uns:
-//    emily.greeting()
-//    println("-----")
-//
-//
-//    println("2. Instanz von Person: Dennis")
-//    println("Name: ")
-//    dennis.greeting()
-//    dennis.name = "Dennis"
-//    dennis.age = 30
-//    println("----")
-//    dennis.greeting()
-//    println("----")
-//    dennis.printAllInfo()
-//    println(maya.name)
-//    maya.login("1234")
-//    emily.login("1234")
-//
-
-
-
-
-
+    var emily: Person = Person()
+    var dennis: Person = Person()
     var maya: Person = Person()
     maya.name = "Maya"
+
+    emily.name = "Emily"
+    emily.age = 19
+    emily.eyeColor = "blau"
+    emily.password = "passwort"
+
+
+    println("1. Instanz von Person: Emily")
+    println("Name: ")
+    println(emily.name)
+    println("Alter: ")
+    println(emily.age)
+    println("Augenfarbe: ${emily.eyeColor}")
+    // Emily gruesst uns:
+    emily.greeting()
+    println("-----")
+
+
+    println("2. Instanz von Person: Dennis")
+    println("Name: ")
+    dennis.greeting()
+    dennis.name = "Dennis"
+    dennis.age = 30
+    println("----")
+    dennis.greeting()
+    println("----")
+    dennis.printAllInfo()
+    println(maya.name)
+    maya.login("1234")
+    emily.login("1234")
+
+
     maya.hund.bark()
 
-   println("----- Klasse Hund----")
+    println("----- Klasse Hund----")
 
     var dogNamedLuzie: Dog = Dog()
     println(dogNamedLuzie.name)
@@ -73,7 +69,6 @@ fun main() {
     var singer: Singer = Singer()
     println(singer.name)
     singer.singSong()
-
 
 
 }
