@@ -1,11 +1,13 @@
 package VORLESUNG.Woche05.Tag21
 
+
 fun main() {
     // Elvis Operator:
     var name: String? = null
     // ?: -> wenn name null ist, schreib "Gast" rein
     val displayName = name ?: "Gast"
     println("Willkommen, $displayName")
+
 
     //doWhileString()
 
