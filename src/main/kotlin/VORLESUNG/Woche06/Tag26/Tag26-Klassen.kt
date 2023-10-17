@@ -1,6 +1,8 @@
-package VORLESUNG.Woche06
+package VORLESUNG.Woche06.Tag26
 
-import kotlin.math.sin
+import VORLESUNG.Woche06.Tag26.Dog
+import VORLESUNG.Woche06.Tag26.Person
+import VORLESUNG.Woche06.Tag26.Singer
 
 // Main, in der wir alle Klassen instanziieren (= konkrete Objekte erstellen)
 fun main() {
@@ -13,11 +15,25 @@ fun main() {
     var dennis: Person = Person()
     var maya: Person = Person()
     maya.name = "Maya"
+    maya.favoriteSinger.name
+    var bello: Dog = Dog()
+    var string: String = "string"
+
+    println(bello.name) // Bella
+    println(bello.rasse)// Mops
+    bello.name = "Bello"
+    bello.rasse = "Labrador"
+    println(bello.rasse) // Bello
+    println(bello.rasse) // Labrador
+
+    var o: String = "o"
+
 
     emily.name = "Emily"
     emily.age = 19
     emily.eyeColor = "blau"
     emily.password = "passwort"
+    emily.hunde.add(bello)
 
 
     println("1. Instanz von Person: Emily")
@@ -69,6 +85,7 @@ fun main() {
     var singer: Singer = Singer()
     println(singer.name)
     singer.singSong()
+
 
 
 }

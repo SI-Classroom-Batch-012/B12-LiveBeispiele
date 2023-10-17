@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06
+package VORLESUNG.Woche06.Tag26
 
 /**
  * class Person
@@ -22,7 +22,11 @@ class Person {
     // Klassen koennen auch andere Klassen als Atrribute haben
     var hund: Dog = Dog()
     var favoriteSinger: Singer = Singer()
-
+    var hunde: MutableList<Dog> = mutableListOf(
+        Dog(),
+        Dog(),
+        Dog()
+    )
 
 
     fun greeting(){
