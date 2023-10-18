@@ -7,7 +7,7 @@ open class Fish(name: String, var age: Int): Animal(name, false,true) {
     }
 
     // final: darf nicht ueberschrieben werden
-    final override fun eat(){
+    override fun eat(){
         println("Unser Fisch $name isst Algen und ist satt.")
 
     }
