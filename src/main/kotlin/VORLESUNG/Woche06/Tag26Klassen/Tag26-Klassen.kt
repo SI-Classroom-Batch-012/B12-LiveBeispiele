@@ -1,8 +1,4 @@
-package VORLESUNG.Woche06.Tag26
-
-import VORLESUNG.Woche06.Tag26.Dog
-import VORLESUNG.Woche06.Tag26.Person
-import VORLESUNG.Woche06.Tag26.Singer
+package VORLESUNG.Woche06.Tag26Klassen
 
 // Main, in der wir alle Klassen instanziieren (= konkrete Objekte erstellen)
 fun main() {

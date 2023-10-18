@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06.Tag26
+package VORLESUNG.Woche06.Tag26Klassen
 
 class Dog {
     var name: String = "Bella"

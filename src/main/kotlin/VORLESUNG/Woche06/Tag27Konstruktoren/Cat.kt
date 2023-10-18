@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06.Tag27
+package VORLESUNG.Woche06.Tag27Konstruktoren
 
 // breed: temporäre Variable, nur im Konstruktor verfügbar
 class Cat(var name: String, var alter: Int, breed: String, var owner: Human, var color: String = "black") {

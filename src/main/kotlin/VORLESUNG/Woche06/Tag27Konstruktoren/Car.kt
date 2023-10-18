@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06.Tag27
+package VORLESUNG.Woche06.Tag27Konstruktoren
 
 class Car(var brand: String, var year: Int) {
 
@@ -17,7 +17,6 @@ class Car(var brand: String, var year: Int) {
         println("Mit dem 3. Konstruktor ein Auto mit Verkäufer instanziiert ")
     }
 
-
 }
 
 fun main() {
@@ -31,6 +30,5 @@ fun main() {
     println(sekAuto.color) // soll rot sein
 
     var vendorAuto = Car("Marcel Verkauf")
-
 
 }

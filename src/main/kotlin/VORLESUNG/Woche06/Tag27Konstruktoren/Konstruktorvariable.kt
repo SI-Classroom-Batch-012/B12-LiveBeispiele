@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06.Tag27
+package VORLESUNG.Woche06.Tag27Konstruktoren
 
 class Person(var firstName: String, var lastName: String) {
 

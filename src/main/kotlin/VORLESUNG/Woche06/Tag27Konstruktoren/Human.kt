@@ -1,4 +1,4 @@
-package VORLESUNG.Woche06.Tag27
+package VORLESUNG.Woche06.Tag27Konstruktoren
 
 // Wiederholung: Klasse Human (Mensch) ohne Konstruktor mit Default Werten
 // var variable: Datentyp --> normale Variable
@@ -8,12 +8,16 @@ class Human(var name: String, var age: Int) {
 
     // init Block wird immer beim Instanziieren einer Klasse ausgefuehrt
     init {
-        println("Instanz der Klasse Human namens $name erstellt!")
-        if (age >= 18){
-            println("Diese Instanz der Klasse Human ist volljährig, $age Jahre alt")
+        println("Instanz der Klasse Human namens ${this.name} erstellt!")
+        if (this.age >= 18){
+            println("Diese Instanz der Klasse Human ist volljährig, ${this.age} Jahre alt")
         } else {
             println("Diese Instanz der Klasse Human ist nicht volljährig")
         }
+    }
+
+    fun changeName(name: String){
+        this.name = name
     }
 
 
