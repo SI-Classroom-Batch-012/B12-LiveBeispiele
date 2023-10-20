@@ -4,7 +4,7 @@ open class Lebensmittel(val name: String, protected var preis: Double, open val 
 
     init {
         println("Lebensmittel $name erstellt!")
-        println("Das Lebensmittel ist Vegan? -> $isVegan")
+        println("Das Lebensmittel ist ${if (isVegan) {""} else {"nicht"}} vegan. ")
     }
 
     /**
