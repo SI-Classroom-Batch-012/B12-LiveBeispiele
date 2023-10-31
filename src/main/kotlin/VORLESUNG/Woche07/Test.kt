@@ -1,4 +1,7 @@
 package VORLESUNG.Woche07
+
+import RED
+
 class Held(var hp: Int){
     // logik attacken etc
 }
@@ -6,5 +9,6 @@ class Held(var hp: Int){
 
 open class Character{
 
+    var bla = RED
 
 }
