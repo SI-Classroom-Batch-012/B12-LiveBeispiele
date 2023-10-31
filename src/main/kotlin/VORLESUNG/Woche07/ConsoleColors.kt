@@ -39,7 +39,6 @@ fun main() {
     }
 
     println(reset)
-    println("Bist du grau?")
 
     // alle Hintergrundfarben mit Schleife ausdrucken
     for (i in 40..47){
@@ -48,6 +47,22 @@ fun main() {
     for (i in 100..107){
         print("\u001b[${i}m i ")
     }
+    println(reset)
+
+    // Textfarben formatiert
+    // ${"%3d".format(i)}: Wert von i in einem 3-stelligen, rechts ausgerichteten Format darstellen, i wird mit Leerzeichen aufgefüllt, falls i weniger als 3 Stellen hat
+    for (i in 30..37) print("\u001b[${i}m ${"%3d".format(i)} ")
+    for (i in 90..97) print("\u001b[${i}m ${"%3d".format(i)} ")
+
+
+    println(reset)
+
+    // Hintergrundfarben formatierte Schleife
+    for (i in 40..47) print("\u001b[${i}m ${"%3d".format(i)} ")
+    for (i in 100..107) print("\u001b[${i}m ${"%3d".format(i)} ")
+
+
+    println(reset)
 
 
 }
