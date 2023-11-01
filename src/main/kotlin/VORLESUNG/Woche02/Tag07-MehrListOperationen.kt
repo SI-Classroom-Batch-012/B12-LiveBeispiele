@@ -11,6 +11,7 @@ fun main(){
         "Kaffee",
         "Tee"
     )
+    // letztes Element: 3 Varianten
     val lastElement: String = shoppingList.get(shoppingList.size-1)
 
     // liste in mutable (veränderbare) liste umwandeln, in neuer variable speichern:

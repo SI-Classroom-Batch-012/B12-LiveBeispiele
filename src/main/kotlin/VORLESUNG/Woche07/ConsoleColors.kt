@@ -32,20 +32,20 @@ fun main() {
 
     // alle Textfarben mit Schleife ausdrucken
     for (i in 30..37){
-        print("\u001b[${i}m i ")
+        print("\u001b[${i}m $i ")
     }
     for (i in 90..97){
-        print("\u001b[${i}m i ")
+        print("\u001b[${i}m $i ")
     }
 
     println(reset)
 
     // alle Hintergrundfarben mit Schleife ausdrucken
     for (i in 40..47){
-        print("\u001b[${i}m i ")
+        print("\u001b[${i}m $i ")
     }
     for (i in 100..107){
-        print("\u001b[${i}m i ")
+        print("\u001b[${i}m $i ")
     }
     println(reset)
 
@@ -63,6 +63,5 @@ fun main() {
 
 
     println(reset)
-
 
 }
