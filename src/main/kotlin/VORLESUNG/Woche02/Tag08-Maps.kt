@@ -17,7 +17,7 @@ fun main(){
 
 
 
-// wichtige Map Operationen (lesend, auf Maps und MutableMaps anwendbar, Äquivalent zu vielen Listenoperationen)
+// wichtige lesende Map Operationen (lesend, auf Maps und MutableMaps anwendbar, Äquivalent zu vielen Listenoperationen)
 
     // size
     var size: Int = articles.size
