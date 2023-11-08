@@ -1,4 +1,4 @@
-package Enums
+package VORLESUNG.Woche08.Enums
 
 enum class Marke{
     ADIDAS, NIKE

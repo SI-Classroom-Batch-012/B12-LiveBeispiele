@@ -1,4 +1,3 @@
-import Classes.Match
 import Classes.Team
 
 fun main() {
